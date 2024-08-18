@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchHistory>
-    <launchGroup id="org.eclipse.debug.ui.launchGroup.debug">
+    <launchGroup id="org.hibernate.eclipse.launch.CodeGenerationLaunchGroup">
         <mruHistory/>
         <favorites/>
     </launchGroup>
@@ -8,7 +8,11 @@
         <mruHistory/>
         <favorites/>
     </launchGroup>
-    <launchGroup id="org.eclipse.eclemma.ui.launchGroup.coverage">
+    <launchGroup id="org.hibernate.eclipse.launch.ConsoleConfigurationLaunchGroup">
+        <mruHistory/>
+        <favorites/>
+    </launchGroup>
+    <launchGroup id="org.eclipse.debug.ui.launchGroup.debug">
         <mruHistory/>
         <favorites/>
     </launchGroup>
