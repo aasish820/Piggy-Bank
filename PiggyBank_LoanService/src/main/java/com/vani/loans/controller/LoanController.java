@@ -19,7 +19,7 @@ import com.vani.loans.model.LoanDTO;
 import com.vani.loans.service.LoanService;
 
 @RestController
-@RequestMapping("/loans")
+@RequestMapping("/piggybank/loan")
 public class LoanController {
 
     @Autowired

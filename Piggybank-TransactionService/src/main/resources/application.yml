@@ -3,12 +3,12 @@
 # - The yaml file had comments which are lost in the refactoring!
 spring:
   application:
-    name: Piggybank-TransactionService
+    name: PIGGYBANK-TRANSACTION
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/piggybank_transactionService
+    url: jdbc:mysql://localhost:3306/piggybank
     username: root
-    password: root
+    password: Asd,./123
   jpa:
     properties:
       hibernate:
@@ -19,3 +19,11 @@ spring:
     show-sql: true
   messages:
     basename: message
+
+server:
+  port: 8083
+
+eureka:
+  client:
+    service-url:
+      defaultZone : http://localhost:8761/eureka/

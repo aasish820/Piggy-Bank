@@ -28,21 +28,21 @@ public class LockerServiceImpl implements LockerService {
 	@Autowired
 	private RestTemplate restTemplate;
 
-	private static final String ACCOUNT_SERVICE_URL = "http://account-service/api/accounts/";
+	private static final String ACCOUNT_SERVICE_URL = "http://PIGGYBANK-ACCOUNT/";
 
 //	@SuppressWarnings("unchecked")
 	@Override
 	public LockerDTO createLocker(LockerDTO lockerDTO) {
-//		Long accountId = lockerDTO.getAccountId();
-//        Map<String, Object> accountData = restTemplate.getForObject(ACCOUNT_SERVICE_URL + accountId, Map.class);
-//
-//        if (accountData == null || !accountData.containsKey("id")) {
-//            throw new RuntimeException("Account not found with id " + accountId);
-//        }
+		Long accountId = lockerDTO.getAccountId();
+        Map<String, Object> accountData = restTemplate.getForObject(ACCOUNT_SERVICE_URL + accountId, Map.class);
+
+        if (accountData == null || !accountData.containsKey("id")) {
+            throw new RuntimeException("Account not found with id " + accountId);
+        }
 
         Locker locker = lockerMapper.toEntity(lockerDTO);
-//        locker.setAccountId(accountId);
-        locker.setAccountId(1L);
+        locker.setAccountId(accountId);
+//        locker.setAccountId(1L);
         locker = lockerRepo.save(locker);
         return lockerMapper.toDTO(locker);
 	}

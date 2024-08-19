@@ -18,7 +18,7 @@ import com.piggybank.giftcardservice.model.GiftCardDTO;
 import com.piggybank.giftcardservice.service.GiftCardService;
 
 @RestController
-@RequestMapping("/api/giftcard")
+@RequestMapping("/piggybank/giftcard")
 public class GiftCardController {
 	@Autowired
 	private GiftCardService giftCardService;

@@ -3,12 +3,53 @@ spring:
     name: PIGGYBANK-GATEWAY
   cloud:
     gateway:
-      mvc:
-        routes:
-        - id: piggybank-creditcard-service
-          uri: lb://PIGGYBANK-CREDITCARD-SERVICE
-          predicates:
-          - Path=/piggybank/creditcard/**
+      routes:
+      - id: piggybank-account
+        uri: lb://PIGGYBANK-ACCOUNT
+        predicates:
+        - Path=/piggybank/account/**
+        filters:
+        - AuthenticationFilter
+
+      - id: piggybank-loan
+        uri: lb://PIGGYBANK-LOAN
+        predicates:
+        - Path=/piggybank/loan/**
+        filters:
+        - AuthenticationFilter
+
+      - id: piggybank-creditcard
+        uri: lb://PIGGYBANK-CREDITCARD
+        predicates:
+        - Path=/piggybank/creditcard/**
+        filters:
+        - AuthenticationFilter
+
+      - id: piggybank-giftcard
+        uri: lb://PIGGYBANK-GIFTCARD
+        predicates:
+        - Path=/piggybank/giftcard/**
+        filters:
+        - AuthenticationFilter
+
+      - id: piggybank-locker
+        uri: lb://PIGGYBANK-LOCKER
+        predicates:
+        - Path=/piggybank/locker/**
+        filters:
+        - AuthenticationFilter
+
+      - id: piggybank-security
+        uri: lb://PIGGYBANK-SECURITY
+        predicates:
+        - Path=/piggybank/auth/**
+
+      - id: piggybank-transaction
+        uri: lb://PIGGYBANK-TRANSACTION
+        predicates:
+        - Path=/piggybank/transaction/**
+        filters:
+        - AuthenticationFilter
 
 server:
   port: 8080

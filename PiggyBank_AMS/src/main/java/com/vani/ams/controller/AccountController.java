@@ -21,7 +21,7 @@ import com.vani.ams.service.impl.AccountServiceImpl;
 
 import jakarta.validation.Valid;
 @RestController
-@RequestMapping("/account/users")
+@RequestMapping("/piggybank/account/users")
 public class AccountController {
 	@Autowired
     private AccountServiceImpl accountService;

@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/api/piggybank/creditcard")
+@RequestMapping("/piggybank/creditcard")
 public class CreditCardController {
 	
 	@Autowired
