@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 public class Role {
 	@jakarta.persistence.Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long Id;
+	private long id;
 	
 	@NotBlank
 	private String name;
