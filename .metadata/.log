@@ -5410,3 +5410,39 @@ Java Model Exception: Error in Java Model (code 969): PiggyBank_AMS does not exi
 !ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-18 12:13:57.591
 !MESSAGE Boot project ADDED: PiggyBank_LoanService
 >>>>>>> d71f944bae9a10e4b7e9d7dda494291439dbd5b8
+
+!ENTRY org.jboss.tools.usage 2 0 2024-08-19 13:54:23.394
+!MESSAGE Could not create Segment Analytics instance, missing writeKey.
+
+!ENTRY org.jboss.tools.usage 2 0 2024-08-19 13:54:23.402
+!MESSAGE Could not send USER event 'Anonymous ID: 25cad2ab-98ac-44d7-a491-7659f6e03064': no analytics instance present.
+
+!ENTRY org.jboss.tools.usage 2 0 2024-08-19 13:54:23.404
+!MESSAGE Could not create Segment Analytics instance, missing writeKey.
+
+!ENTRY org.jboss.tools.usage 2 0 2024-08-19 13:54:23.405
+!MESSAGE Could not send STARTUP event 'startup': no analytics instance present.
+
+!ENTRY org.jboss.tools.usage 2 0 2024-08-19 13:54:23.406
+!MESSAGE Could not create Segment Analytics instance, missing writeKey.
+
+!ENTRY org.jboss.tools.usage 2 0 2024-08-19 13:54:23.407
+!MESSAGE Could not send USER event 'Anonymous ID: 25cad2ab-98ac-44d7-a491-7659f6e03064': no analytics instance present.
+
+!ENTRY org.jboss.tools.usage 2 0 2024-08-19 13:54:23.408
+!MESSAGE Could not create Segment Analytics instance, missing writeKey.
+
+!ENTRY org.jboss.tools.usage 2 0 2024-08-19 13:54:23.408
+!MESSAGE Could not send ACTION event 'startQuteLS': no analytics instance present.
+
+!ENTRY org.jboss.tools.usage 2 0 2024-08-19 13:54:23.421
+!MESSAGE Could not create Segment Analytics instance, missing writeKey.
+
+!ENTRY org.jboss.tools.usage 2 0 2024-08-19 13:54:23.422
+!MESSAGE Could not send USER event 'Anonymous ID: 25cad2ab-98ac-44d7-a491-7659f6e03064': no analytics instance present.
+
+!ENTRY org.jboss.tools.usage 2 0 2024-08-19 13:54:23.424
+!MESSAGE Could not create Segment Analytics instance, missing writeKey.
+
+!ENTRY org.jboss.tools.usage 2 0 2024-08-19 13:54:23.426
+!MESSAGE Could not send ACTION event 'startLS': no analytics instance present.
