@@ -5714,3 +5714,12 @@ org.eclipse.equinox.p2.core.ProvisionException: An error occurred while download
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 !SUBENTRY 2 org.eclipse.equinox.p2.discovery.compatibility 4 0 2024-08-19 21:32:53.544
 !MESSAGE An error occurred while downloading https://download.jboss.org/jbosstools/photon/stable/updates/discovery.central/4.29.1.Final/jbosstools-directory.xml. The cache file A:\Piggy-Bank\.metadata\.plugins\org.eclipse.equinox.p2.discovery.compatibility\cache\downloading\discovery1860073685 could not be renamed to A:\Piggy-Bank\.metadata\.plugins\org.eclipse.equinox.p2.discovery.compatibility\cache\discovery1860073685.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2024-08-19 21:45:59.696
+!MESSAGE The digest algorithms (md5) used to verify osgi.bundle,javaewah,1.1.6.v20160919-1400 have severely compromised security. Please report this concern to the artifact provider.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2024-08-19 21:46:00.126
+!MESSAGE The digest algorithms (md5) used to verify osgi.bundle,javax.xml.bind,2.2.0.v201105210648 have severely compromised security. Please report this concern to the artifact provider.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2024-08-19 21:46:00.129
+!MESSAGE The digest algorithms (md5) used to verify osgi.bundle,org.glassfish.hk2.osgi-resource-locator,2.3.0.b10_v201508191500 have severely compromised security. Please report this concern to the artifact provider.
