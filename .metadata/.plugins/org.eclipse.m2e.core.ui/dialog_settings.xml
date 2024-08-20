@@ -2,6 +2,28 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+			<item value="A:\Piggy-Bank\PiggyBank_LoanService"/>
+			<item value="A:\Piggy-Bank\PiggyBank_AMS"/>
+			<item value="A:\Piggy-Bank\PiggyBank-ServiceRegistry"/>
+			<item value="A:\Piggy-Bank\PiggyBank-CreditCard"/>
+			<item value="A:\Piggy-Bank\PiggyBank-Apigateway"/>
+			<item value="A:\Piggy-Bank\Piggybank-TransactionService"/>
+			<item value="A:\Piggy-Bank\Piggybank-LockerService"/>
+=======
+			<item value="C:\Users\sande\Piggy-Bank\PiggyBank-UserService"/>
+			<item value="C:\Users\sande\Piggy-Bank\Piggybank-TransactionService"/>
+			<item value="C:\Users\sande\Piggy-Bank\PiggyBank-ServiceRegistry"/>
+			<item value="C:\Users\sande\Piggy-Bank\Piggybank-LockerService"/>
+			<item value="C:\Users\sande\Piggy-Bank\PiggyBank-GiffCard"/>
+			<item value="C:\Users\sande\Piggy-Bank\PiggyBank-CreditCard"/>
+			<item value="C:\Users\sande\Piggy-Bank\PiggyBank_LoanService"/>
+			<item value="C:\Users\sande\Piggy-Bank\PiggyBank_AMS"/>
+			<item value="C:\Users\sande\Piggy-Bank\PiggyBank-Apigateway"/>
+>>>>>>> d71f944bae9a10e4b7e9d7dda494291439dbd5b8
+>>>>>>> parent of fdf5484 (resolved conflicts)
 			<item value="/Users/aasishkatwal/Documents/workspace-spring-tool-suite-4-4.23.1.RELEASE/PiggyBank-CreditCard"/>
 			<item value="/Users/aasishkatwal/Documents/workspace-spring-tool-suite-4-4.23.1.RELEASE/AuthExample"/>
 		</list>
@@ -14,4 +36,71 @@
 			<item value="[name]"/>
 		</list>
 	</section>
+<<<<<<< HEAD
+=======
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+		</list>
+		<list key="groupId">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+>>>>>>> parent of fdf5484 (resolved conflicts)
 </section>

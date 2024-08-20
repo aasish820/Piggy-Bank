@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchHistory>
+<<<<<<< HEAD
     <launchGroup id="org.eclipse.debug.ui.launchGroup.debug">
+=======
+    <launchGroup id="org.hibernate.eclipse.launch.CodeGenerationLaunchGroup">
+>>>>>>> parent of fdf5484 (resolved conflicts)
         <mruHistory/>
         <favorites/>
     </launchGroup>
@@ -8,7 +12,15 @@
         <mruHistory/>
         <favorites/>
     </launchGroup>
+<<<<<<< HEAD
     <launchGroup id="org.eclipse.eclemma.ui.launchGroup.coverage">
+=======
+    <launchGroup id="org.hibernate.eclipse.launch.ConsoleConfigurationLaunchGroup">
+        <mruHistory/>
+        <favorites/>
+    </launchGroup>
+    <launchGroup id="org.eclipse.debug.ui.launchGroup.debug">
+>>>>>>> parent of fdf5484 (resolved conflicts)
         <mruHistory/>
         <favorites/>
     </launchGroup>
