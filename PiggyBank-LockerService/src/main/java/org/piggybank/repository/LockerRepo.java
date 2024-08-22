@@ -33,7 +33,7 @@ public interface LockerRepo extends JpaRepository<Locker, Long> {
 	@Query("SELECT l FROM Locker l WHERE l.lockerType = :lockerType")
 	Page<Locker> findLockersByType(@Param("lockerType") String lockerType, Pageable pageable);
 
-	@Query("SELECT l FROM Locker l WHERE l.account.id = :accountId")
+	@Query("SELECT l FROM Locker l WHERE l.account_id = :accountId")
 	List<Locker> findLockersByAccountId(@Param("accountId") Long accountId);
 
 	@Modifying

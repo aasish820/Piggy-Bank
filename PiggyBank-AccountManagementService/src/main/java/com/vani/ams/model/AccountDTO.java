@@ -5,7 +5,7 @@ import java.sql.Date;
 import lombok.Data;
 @Data
 public class AccountDTO {
-	private Long id;
+	private long id;
     private String accountNumber;
     private String accountHolderName;
     private String accountType;

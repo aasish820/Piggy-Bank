@@ -3,6 +3,8 @@ package org.piggybank.serviceImpl;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+
+import org.piggybank.config.JwtTokenInterceptor;
 import org.piggybank.entity.Locker;
 import org.piggybank.entity.LockerType;
 import org.piggybank.exception.LockerNotFoundException;
@@ -11,8 +13,13 @@ import org.piggybank.model.LockerDTO;
 import org.piggybank.repository.LockerRepo;
 import org.piggybank.service.LockerService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.web.client.RestTemplateRequestCustomizer;
+import org.springframework.context.annotation.Bean;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.client.ClientHttpRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -28,21 +35,25 @@ public class LockerServiceImpl implements LockerService {
 	@Autowired
 	private RestTemplate restTemplate;
 
-	private static final String ACCOUNT_SERVICE_URL = "http://account-service/api/accounts/";
+	private static final String ACCOUNT_SERVICE_URL = "http://localhost:8080/account/";
+	
 
 //	@SuppressWarnings("unchecked")
 	@Override
 	public LockerDTO createLocker(LockerDTO lockerDTO) {
-//		Long accountId = lockerDTO.getAccountId();
-//        Map<String, Object> accountData = restTemplate.getForObject(ACCOUNT_SERVICE_URL + accountId, Map.class);
+		Long accountId = lockerDTO.getAccount_id();
+//		HttpHeaders headers = new HttpHeaders();
+//		headers.set("Authorization", token);
 //
-//        if (accountData == null || !accountData.containsKey("id")) {
-//            throw new RuntimeException("Account not found with id " + accountId);
-//        }
+//		HttpEntity<RestRequest> entityReq = new HttpEntity(headers)<RestRequest>(request, headers);
+        Map<String, Object> accountData = restTemplate.getForObject(ACCOUNT_SERVICE_URL + accountId+"/details", Map.class);
+        if (accountData == null || !accountData.containsKey("id")) {
+            throw new RuntimeException("Account not found with id " + accountId);
+        }
 
         Locker locker = lockerMapper.toEntity(lockerDTO);
-//        locker.setAccountId(accountId);
-        locker.setAccountId(1L);
+        locker.setAccount_id(accountId);
+//        locker.setAccountId(1L);
         locker = lockerRepo.save(locker);
         return lockerMapper.toDTO(locker);
 	}
@@ -53,7 +64,7 @@ public class LockerServiceImpl implements LockerService {
 		Locker locker = lockerRepo.findById(lockerId)
                 .orElseThrow(() -> new LockerNotFoundException("Locker not found with id " + lockerId));
 
-        Long accountId = lockerDTO.getAccountId();
+        Long accountId = lockerDTO.getAccount_id();
         Map<String, Object> accountData = restTemplate.getForObject(ACCOUNT_SERVICE_URL + accountId, Map.class);
 
         if (accountData == null || !accountData.containsKey("id")) {
@@ -63,7 +74,7 @@ public class LockerServiceImpl implements LockerService {
         locker.setLockerType(LockerType.valueOf(lockerDTO.getLockerType()));
         locker.setLockerNumber(lockerDTO.getLockerNumber());
         locker.setIsAvailable(lockerDTO.getIsAvailable());
-        locker.setAccountId(accountId);
+        locker.setAccount_id(accountId);
 
         locker = lockerRepo.save(locker);
         return lockerMapper.toDTO(locker);

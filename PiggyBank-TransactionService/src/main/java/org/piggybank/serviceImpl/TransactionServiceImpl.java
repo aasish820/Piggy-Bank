@@ -31,11 +31,18 @@ public class TransactionServiceImpl implements TransactionService {
     @Autowired
     private RestTemplate restTemplate;
     
-    private static final String ACCOUNT_SERVICE_URL = "http://account-service/api/accounts/";
+    private static final String ACCOUNT_SERVICE_URL = "http://localhost:8080/account/";
 
     @Override
     public TransactionDTO createTransaction(TransactionDTO transactionDTO) {
         Transaction transaction = transactionMapper.toEntity(transactionDTO);
+        
+        Long accountId = transactionDTO.getAccountId();
+        Map<String, Object> accountData = restTemplate.getForObject(ACCOUNT_SERVICE_URL + accountId + "/details", Map.class);
+
+        if (accountData == null || !accountData.containsKey("id")) {
+            throw new RuntimeException("Account not found with id " + accountId);
+        }
         transaction = transactionRepo.save(transaction);
         return transactionMapper.toDTO(transaction);
     }
@@ -117,7 +124,7 @@ public class TransactionServiceImpl implements TransactionService {
     @Override
     public TransactionDTO withdraw(Long accountId, Double amount, String reason) {
     	 @SuppressWarnings("unchecked")
-		Map<String, Object> accountData = restTemplate.getForObject(ACCOUNT_SERVICE_URL + accountId, Map.class);
+		Map<String, Object> accountData = restTemplate.getForObject(ACCOUNT_SERVICE_URL + accountId + "/details", Map.class);
 
          Double balance = (Double) accountData.get("balance");
 
@@ -143,7 +150,7 @@ public class TransactionServiceImpl implements TransactionService {
     @SuppressWarnings("unchecked")
 	@Override
     public TransactionDTO deposit(Long accountId, Double amount, String reason) {
-        Map<String, Object> accountData = restTemplate.getForObject(ACCOUNT_SERVICE_URL + accountId, Map.class);
+        Map<String, Object> accountData = restTemplate.getForObject(ACCOUNT_SERVICE_URL + accountId + "/details", Map.class);
 
         Double balance = (Double) accountData.get("balance");
 

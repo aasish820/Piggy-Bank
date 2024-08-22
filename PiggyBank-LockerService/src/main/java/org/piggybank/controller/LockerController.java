@@ -12,13 +12,13 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/lockers")
+@RequestMapping("/locker")
 public class LockerController {
 
     @Autowired
     private LockerService lockerService;
 
-    @PostMapping
+    @PostMapping("/create")
     public ResponseEntity<LockerDTO> createLocker(@RequestBody LockerDTO lockerDTO) {
         LockerDTO createdLocker = lockerService.createLocker(lockerDTO);
         return new ResponseEntity<>(createdLocker, HttpStatus.CREATED);

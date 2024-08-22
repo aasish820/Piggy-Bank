@@ -7,4 +7,3 @@ public class CardNotFoundException extends RuntimeException {
 		super(message);
 	}
 }
-

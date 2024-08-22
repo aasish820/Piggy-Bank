@@ -34,7 +34,8 @@ public class Locker {
 	@NotNull(message = "Availability status cannot be null")
 	private Boolean isAvailable;
 	
-	 private Long accountId;
+	@Column(name="account_id")
+	private Long account_id;
 
 	@JsonIgnore
 	private LocalDateTime deleted_at;

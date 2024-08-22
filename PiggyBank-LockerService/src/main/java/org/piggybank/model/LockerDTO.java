@@ -8,11 +8,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class LockerDTO {
-
-    private Long lockerId;
     private String lockerType;
     private String lockerNumber;
     private Boolean isAvailable;
-    private Long accountId;
+    private Long account_id;
     private int monthlyFee;
 }

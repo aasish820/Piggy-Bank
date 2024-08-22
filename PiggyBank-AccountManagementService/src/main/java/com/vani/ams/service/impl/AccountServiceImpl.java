@@ -54,6 +54,16 @@ public class AccountServiceImpl implements AccountService {
 
 	@Override
 	public AccountDTO createAccount(AccountDTO accountDTO) {
+		System.out.println(accountDTO.getAccountType());
+		System.out.println(accountDTO.getAccountNumber());
+
+		System.out.println(accountDTO.getAccountHolderName());
+
+		System.out.println(accountDTO.getEmail());
+
+		System.out.println(accountDTO.getPhoneNumber());
+		
+		
 		Account account = new Account();
 	    account.setAccountNumber(accountDTO.getAccountNumber());
 	    account.setAccountHolderName(accountDTO.getAccountHolderName());

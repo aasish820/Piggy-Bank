@@ -21,13 +21,13 @@ import com.vani.ams.service.impl.AccountServiceImpl;
 
 import jakarta.validation.Valid;
 @RestController
-@RequestMapping("/account/users")
+@RequestMapping("/account")
 public class AccountController {
 	@Autowired
     private AccountServiceImpl accountService;
 
     @PostMapping("/create")
-    public ResponseEntity<?> createAccount(@Valid @ModelAttribute("accountDTO") AccountDTO accountDTO) {
+    public ResponseEntity<?> createAccount(@ModelAttribute("accountDTO") AccountDTO accountDTO) {
         try {
             AccountDTO savedAccount = accountService.createAccount(accountDTO);
             Map<String, String> response = new HashMap<>();
@@ -51,6 +51,7 @@ public class AccountController {
     public ResponseEntity<?> getAccountById(@PathVariable("id") Long id) {
         try {
             AccountDTO accountDTO = accountService.findAccountById(id);
+            System.out.println(accountDTO.getAccountHolderName());
             return ResponseEntity.ok(accountDTO);
         } catch (AccountNotFoundException e) {
             e.printStackTrace();

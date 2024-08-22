@@ -10,11 +10,10 @@ public class LockerMapper {
 
     public LockerDTO toDTO(Locker locker) {
         return new LockerDTO(
-            locker.getLockerId(),
             locker.getLockerType().name(),
             locker.getLockerNumber(),
             locker.getIsAvailable(),
-            locker.getAccountId(),
+            locker.getAccount_id(),
             locker.getLockerType().getMonthlyFee()
         );
     }
@@ -24,7 +23,7 @@ public class LockerMapper {
         locker.setLockerType(LockerType.valueOf(lockerDTO.getLockerType()));
         locker.setLockerNumber(lockerDTO.getLockerNumber());
         locker.setIsAvailable(lockerDTO.getIsAvailable());
-        locker.setAccountId(lockerDTO.getAccountId());
+        locker.setAccount_id(lockerDTO.getAccount_id());
         return locker;
     }
 }

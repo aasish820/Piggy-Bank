@@ -1,0 +1,58 @@
+spring:
+ cloud:
+   gateway:
+     routes:
+       - id: user-service
+         uri: lb://USER-SERVICE
+         predicates:
+           - Path=/auth/**
+
+       - id: creditcard-service
+         uri: lb://CREDITCARD-SERVICE
+         predicates:
+           - Path=/creditcard/**
+         filters:
+           - AuthenticationFilter
+   
+       - id: locker-service
+         uri: lb://LOCKER-SERVICE
+         predicates:
+           - Path=/locker/**
+         filters:
+           - AuthenticationFilter
+
+       - id: account-service
+         uri: lb://ACCOUNT-SERVICE
+         predicates:
+           - Path=/account/**
+         filters:
+           - AuthenticationFilter
+
+       - id: loan-service
+         uri: lb://LOAN-SERVICE
+         predicates:
+           - Path=/loan/**
+         filters:
+           - AuthenticationFilter
+
+       - id: transaction-service
+         uri: lb://TRANSACTION-SERVICE
+         predicates:
+           - Path=/transaction/**
+         filters:
+           - AuthenticationFilter
+
+       - id: giftcard-service
+         uri: lb://GIFTCARD-SERVICE
+         predicates: 
+           - Path=/giftcard/**
+         filters:
+           - AuthenticationFilter
+
+ application:
+   name: PIGGYBANK-GATEWAY
+
+eureka:
+  client:
+    service-url:
+      defaultZone : http://localhost:8761/eureka/

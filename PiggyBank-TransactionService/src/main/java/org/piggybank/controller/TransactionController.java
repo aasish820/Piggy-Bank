@@ -12,14 +12,14 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/transactions")
+@RequestMapping("/transaction")
 public class TransactionController {
 
     @Autowired
     private TransactionService transactionService;
 
-    @PostMapping
-    public ResponseEntity<TransactionDTO> createTransaction(@RequestBody TransactionDTO transactionDTO) {
+    @PostMapping("/create")
+    public ResponseEntity<TransactionDTO> createTransaction(@ModelAttribute("TransactionDTO") TransactionDTO transactionDTO) {
         TransactionDTO createdTransaction = transactionService.createTransaction(transactionDTO);
         return new ResponseEntity<>(createdTransaction, HttpStatus.CREATED);
     }
