@@ -6,9 +6,9 @@ spring:
     name: LOAN-SERVICE
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/piggybank
+    url: jdbc:mysql://localhost:3306/piggybank_loanservice
     username: root
-    password: Asd,./123
+    password: root
   jpa:
     properties:
       hibernate:
