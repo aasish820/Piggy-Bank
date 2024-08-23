@@ -1,0 +1,13 @@
+INDEX VERSION 1.134+A:\Piggy-Bank\.metadata\.plugins\org.eclipse.jdt.core
+2514998785.index
+2739786644.index
+3756527908.index
+2851924056.index
+3461051442.index
+2803545974.index
+4120781118.index
+1055986435.index
+2867569006.index
+4270089995.index
+1094319972.index
+1865797976.index
